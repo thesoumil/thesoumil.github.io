@@ -1,0 +1,122 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #002c4079;
+}
+
+.navbar {
+    position: fixed;
+    height: 80px;
+    width: 100vw;
+    background-color: #002C40;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 75%;
+    width: 150px;
+    background-image: url("./images/CarClubLogoTransparent.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 40px;
+    /* border: 2px solid white; */
+}
+
+.nav-options ul {
+    height: 100%;
+    width: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* border: 2px solid white; */
+}
+
+.nav-options li {
+    display: inline;
+    border-radius: 50px;
+    font-weight: bold;
+}
+
+.nav-options a {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.369);
+    transition: 0.1s ease-in-out;
+}
+
+.nav-options a:hover {
+    color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.369);
+    padding: 12px 30px;
+    border-radius: 50px;
+}
+
+.banner {
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url("./images/mainbg.jpg");
+    background-size: cover;
+    
+}
+
+.content {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
+}
+
+.content h1 {
+    font-size: 70px;
+    margin-top: 80px;
+    font-family: cursive;
+}
+
+.content p {
+    margin: 20px auto;
+    font-weight: 100;
+    font-size: 20px;
+    line-height: 25px;
+    font-family: monospace;
+}
+
+button {
+    width: 200px;
+    padding: 20px 50px;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 50px;
+    font-weight: bold;
+    border: 2px solid #009688;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+span {
+    background: #009688;
+    height: 100%;
+    width: 0;
+    border-radius: 50px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+button:hover span {
+    width: 100%;
+}
