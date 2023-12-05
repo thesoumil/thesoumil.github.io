@@ -129,6 +129,28 @@ button:hover span {
     width: 100%;
 }
 
+@media screen and (max-width: 770px) {
+    .banner {
+        height: 100vh;
+        width: 100vw;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("./images/mainbg.jpg");
+        background-size: cover;
+    }
+    .content h1 {
+        font-size: 55px;
+        margin-top: 80px;
+        font-family: 'Sofia';
+        line-height: 60px;
+    }
+    .content p {
+        margin: 20px 30px;
+        font-weight: 100;
+        font-size: 15px;
+        line-height: 23px;
+        font-family: 'Ubuntu', sans-serif;
+    }
+}
+
 #services {
     width: 100%;
     padding: 70px 0;
