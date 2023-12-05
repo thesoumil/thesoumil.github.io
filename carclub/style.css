@@ -324,6 +324,10 @@ hr {
         font-size: 35px;
         font-family: 'Sofia';
     }
+    .features h1 {
+        font-weight: bold;
+        font-family: 'Ubuntu', sans-serif;
+    }
     .features {
         flex-basis: 100%;
     }
