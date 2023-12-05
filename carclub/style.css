@@ -60,7 +60,7 @@ body::-webkit-scrollbar {
     transition: 0.1s ease-in-out;
 }
 
-.nav-options a:hover {
+.nav-options a.active, a:hover {
     color: rgba(255, 255, 255, 0.9);
     background-color: rgba(255, 255, 255, 0.369);
     padding: 12px 30px;
