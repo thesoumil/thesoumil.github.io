@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <title>CarClub</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/96d77f0c36.js" crossorigin="anonymous"></script>
-    <title>CarClub</title>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
 </head>
 
 <body>
@@ -22,15 +23,15 @@
         <div class="logo"></div>
         <div class="nav-options">
             <ul>
-                <li><a class="active" href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Features</a></li>
-                <li><a href="#">Contact us</a></li>
+                <li><a href="#banner">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#feature">Features</a></li>
+                <li><a href="#footer">Contact us</a></li>
             </ul>
         </div>
     </div>
 
-    <div class="banner">
+    <section id="banner">
         <div class="content">
             <h1>Welcome to CarClub</h1>
             <p>Have your car cleaned effortlessly at your doorstep by our trained professionals!<br>Enjoy your
@@ -39,7 +40,7 @@
                 <button type="button"><span></span>BOOK NOW</button>
             </div>
         </div>
-    </div>
+    </section>
 
     <section id="services">
         <div class="title-text">
@@ -205,6 +206,13 @@
             <i class="fa fa-twitter"></i>
         </div>
     </section>
+
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]', {
+            speed: 1000,
+            speedAsDuration: true
+        });
+    </script>
 </body>
 
 </html>
