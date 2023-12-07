@@ -407,5 +407,9 @@ hr {
     .footer-left, .footer-right {
         flex-basis: 100%;
         font-size: 14px;
+        text-align: initial;
+    }
+    .footer-left .fa, .footer-right .fa {
+        text-align: initial;
     }
 }
