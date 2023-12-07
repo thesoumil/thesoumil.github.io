@@ -8,6 +8,7 @@ body {
     -ms-overflow-style: none;
     /* for edge */
     overflow-y: scroll;
+    -webkit-tap-highlight-color: transparent;
 }
 
 body::-webkit-scrollbar {
