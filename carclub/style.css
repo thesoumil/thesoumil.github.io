@@ -59,15 +59,14 @@ body::-webkit-scrollbar {
     transition: 0.1s ease-in-out;
 }
 
-.nav-options a.active,
-a:hover {
+.nav-options a:hover {
     color: rgba(255, 255, 255, 0.9);
     background-color: rgba(255, 255, 255, 0.369);
     padding: 12px 30px;
     border-radius: 50px;
 }
 
-.banner {
+#banner {
     height: 100vh;
     width: 100vw;
     background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("./images/mainbg.jpg");
@@ -403,4 +402,10 @@ hr {
 .social-links .fa:hover{
     background: #006593;
     color: #fff;
+}
+@media screen and (max-width: 770px) {
+    .footer-left, .footer-right {
+        flex-basis: 100%;
+        font-size: 14px;
+    }
 }
