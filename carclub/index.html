@@ -19,6 +19,7 @@
 </head>
 
 <body>
+    <div id="preloader"></div>
     <div class="navbar">
         <div class="logo"></div>
         <div class="nav-options">
@@ -212,6 +213,12 @@
             speed: 1000,
             speedAsDuration: true
         });
+    </script>
+    <script>
+        var loader = document.getElementById("preloader");
+        window.addEventListener("load", function(){
+            loader.style.display = "none";
+        })
     </script>
 </body>
 
