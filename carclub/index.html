@@ -20,7 +20,7 @@
 
 <body>
     <div id="preloader"></div>
-    <div class="navbar">
+    <div id="navbar">
         <div class="logo"></div>
         <div class="nav-options">
             <ul>
@@ -30,6 +30,15 @@
                 <li><a href="#footer">Contact us</a></li>
             </ul>
         </div>
+        <div class="toggle-btn">
+            <i class="fa fa-bars"></i>
+        </div>
+    </div>
+    <div class="dropdown-menu">
+        <li><a href="#banner">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#feature">Features</a></li>
+        <li><a href="#footer">Contact us</a></li>
     </div>
 
     <section id="banner">
@@ -201,9 +210,12 @@
         </div>
 
         <div class="social-links">
-            <a href="https://www.facebook.com/profile.php?id=61554319641067&mibextid=ZbWKwL" target="_blank"><i class="fa fa-facebook"></i></a>
-            <a href="https://instagram.com/carclub.services?igshid=M2RkZGJiMzhjOQ==" target="_blank"><i class="fa fa-instagram"></i></a>
-            <a href="https://www.linkedin.com/company/cleaning-service-51/about/?viewAsMember=true" target="_blank"><i class="fa fa-linkedin"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61554319641067&mibextid=ZbWKwL" target="_blank"><i
+                    class="fa fa-facebook"></i></a>
+            <a href="https://instagram.com/carclub.services?igshid=M2RkZGJiMzhjOQ==" target="_blank"><i
+                    class="fa fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/company/cleaning-service-51/about/?viewAsMember=true" target="_blank"><i
+                    class="fa fa-linkedin"></i></a>
             <i class="fa fa-twitter"></i>
         </div>
     </section>
@@ -214,12 +226,27 @@
             speedAsDuration: true
         });
     </script>
+
     <script>
         var loader = document.getElementById("preloader");
-        window.addEventListener("load", function(){
+        window.addEventListener("load", function () {
             loader.style.display = "none";
         })
     </script>
-</body>
+
+    <script>
+        const toggleBtn = document.querySelector('.toggle-btn')
+        const toggleBtnIcon = document.querySelector('.toggle-btn i')
+        const dropDownMenu = document.querySelector('.dropdown-menu')
+
+        toggleBtn.onclick = function() {
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+            ? 'fa fa-bars'
+            : 'fa fa-bars'
+        }
+    </script>
 
 </html>
