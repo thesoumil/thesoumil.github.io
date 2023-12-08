@@ -16,7 +16,7 @@ body::-webkit-scrollbar {
     /* for Chrome, Safari and Opera */
 }
 
-.navbar {
+#navbar {
     position: fixed;
     height: 72px;
     width: 100vw;
@@ -33,7 +33,7 @@ body::-webkit-scrollbar {
     background-image: url("./images/CarClubLogoTransparent.png");
     background-size: contain;
     background-repeat: no-repeat;
-    margin-left: 55px;
+    margin-left: 25px;
     cursor: pointer;
 }
 
@@ -67,16 +67,61 @@ body::-webkit-scrollbar {
     border-radius: 50px;
 }
 
-@media screen and (max-width: 770px) {
-    .navbar {
-        position: fixed;
-        height: 100px;
-        width: 100vw;
-        background-color: #002C40;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        z-index: 5;
+#navbar .toggle-btn {
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.dropdown-menu {
+    display: none;
+    position: fixed;
+    top: 70px;
+    height: 0;
+    width: 100%;
+    background: #002C40;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 2;
+}
+
+.dropdown-menu.open {
+    height: 250px;
+}
+
+.dropdown-menu li a {
+    padding: 0.7rem;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+
+
+.dropdown-menu li a:hover {
+    background-color: rgba(255, 255, 255, 0.369);
+    color: #fff;
+}
+
+.dropdown-menu li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+@media screen and (max-width: 992px) {
+    .nav-options {
+        display: none;
+    }
+
+    #navbar .toggle-btn {
+        display: block;
+        margin-right: 20px;
+    }
+    .dropdown-menu {
+        display: block;
+
     }
 }
 
@@ -399,9 +444,11 @@ hr {
     color: #006593;
     margin: 10px;
 }
+
 .social-links {
     text-align: center;
 }
+
 .social-links .fa {
     height: 40px;
     width: 40px;
@@ -413,17 +460,23 @@ hr {
     cursor: pointer;
     transition: 0.5s;
 }
-.social-links .fa:hover{
+
+.social-links .fa:hover {
     background: #006593;
     color: #fff;
 }
+
 @media screen and (max-width: 770px) {
-    .footer-left, .footer-right {
+
+    .footer-left,
+    .footer-right {
         flex-basis: 100%;
         font-size: 14px;
         text-align: initial;
     }
-    .footer-left .fa, .footer-right .fa {
+
+    .footer-left .fa,
+    .footer-right .fa {
         text-align: initial;
     }
 }
