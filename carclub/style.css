@@ -96,6 +96,7 @@ body::-webkit-scrollbar {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-decoration: none;
     transition: 0.5s;
 }
 
